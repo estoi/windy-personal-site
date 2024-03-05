@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Seto Regular;
+  src: url("../font/my-font.ttf") format("truetype");
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Seto Regular";
+}
+.theme-transition {
+  transition: background-color 0.7s linear !important;
+}
+
+@keyframes myBounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.landing-wrap {
+  .down-icon {
+    animation: myBounce 1s linear infinite;
+  }
+}
+
+.main-wrap {
+  &:before {
+    display: block;
+    content: "";
+    height: 50vh;
+  }
+  &:after {
+    display: block;
+    content: "";
+    height: 50px;
+  }
+}
+
