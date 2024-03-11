@@ -2,8 +2,8 @@ import { fileURLToPath } from "url";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  vite: {
-    assetsInclude: [/\.glb/]
+  devServer: {
+    host: "0.0.0.0"
   },
   srcDir: "src/",
   devtools: { enabled: true },
@@ -15,19 +15,11 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/html-validator",
     "@unocss/nuxt",
-    "@tresjs/nuxt",
-    "@nuxt/devtools"
   ],
-  tres: {
-    devtools: true,
-  },
   build: {
     transpile: ["gsap"],
   },
-  css: [
-    "@unocss/reset/tailwind.css",
-    "@/assets/styles/global.scss",
-  ],
+  css: ["@unocss/reset/tailwind.css", "@/assets/styles/global.scss"],
   htmlValidator: {
     usePrettier: false,
     logLevel: "verbose",
@@ -62,22 +54,7 @@ export default defineNuxtConfig({
           name: "apple-mobile-web-app-status-bar-style",
           content: "black-translucent",
         },
-      ],
-      script: [
-        // { src: "//repo.bfw.wiki/bfwrepo/js/simplex-noise.min.js" },
-      //   { src: "//cdnjs.cloudflare.com/ajax/libs/gsap/3.0.1/gsap.min.js" },
-      //   {
-      //     src: "//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js",
-      //   },
-      //   {
-      //     src: "//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js",
-      //   },
-      //   process.env.NODE_ENV !== "production"
-      //     ? {
-      //         src: "//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js",
-      //       }
-      //     : {},
-      ],
+      ]
     },
   },
   unocss: {
@@ -92,6 +69,15 @@ export default defineNuxtConfig({
       colors: {
         darkColor: "#0f1423",
         lightColor: "#FFFEF8",
+      },
+      breakpoints: {
+        xs: "320px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+        xxl: "1536px",
       },
     },
   },

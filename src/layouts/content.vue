@@ -1,9 +1,9 @@
 <template>
   <main
     dark:bg-darkColor
-    light:bg-lightColor
+    bg-lightColor
     dark:color-lightColor
-    light:color-darkColor
+    color-darkColor
     class="layout-content-wrap theme-transition"
   >
     <slot />

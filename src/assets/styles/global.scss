@@ -1,12 +1,13 @@
 @font-face {
   font-family: Seto Regular;
-  src: url("../font/my-font.ttf") format("truetype");
+  src: url("~/assets/font/my-font-new.woff2") format("woff");
 }
 
 html,
 body {
   height: 100vh;
   font-family: "Seto Regular";
+  overscroll-behavior: none;
 }
 .theme-transition {
   transition: background-color 0.7s linear !important;
@@ -44,7 +45,11 @@ body {
   &:after {
     display: block;
     content: "";
-    height: 50px;
+    height: 70px;
   }
 }
 
+.model-wrap {
+  width: 20px;
+  height: 100px;
+}

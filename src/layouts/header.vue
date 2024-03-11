@@ -1,6 +1,9 @@
 <script setup>
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+
+const goToPage = (path) => navigateTo(path)
+
 </script>
 
 <template>
@@ -10,24 +13,26 @@ const toggleDark = useToggle(isDark);
     right-0
     h-80px
     flex
-    justify-between
+    justify-end
     flex-items-center
     pl-40px
     z-10
     class="layout-header-wrap"
   >
-    <div
+    <!-- <div
       w-40px
       h-40px
       border-rounded-50%
       overflow-hidden
       bg-gray-500
       class="avatar-wrap"
-    ></div>
+    >
+      <img src="~/assets/images/avatar.jpeg" />
+    </div> -->
     <div class="nav-wrap">
       <div flex flex-items-center class="list">
-        <div ml-20px mr-20px cursor-pointer class="item">首页</div>
-        <div ml-20px mr-20px cursor-pointer class="item">联系我</div>
+        <!-- <div ml-20px mr-20px cursor-pointer class="item" @click="goToPage('/')">首页</div>
+        <div ml-20px mr-20px cursor-pointer class="item" @click="goToPage('/about')">联系我</div> -->
         <div
           ml-20px
           mr-20px
@@ -39,12 +44,14 @@ const toggleDark = useToggle(isDark);
           <Icon
             v-if="!isDark"
             name="material-symbols:dark-mode-outline-rounded"
-            class="dark:color-lightColor light:color-darkColor"
+            size="30"
+            class="dark:color-lightColor color-darkColor"
           />
           <Icon
             v-if="isDark"
             name="material-symbols:light-mode-outline-rounded"
-            class="dark:color-lightColor light:color-darkColor"
+            size="30"
+            class="dark:color-lightColor color-darkColor"
           />
         </div>
       </div>

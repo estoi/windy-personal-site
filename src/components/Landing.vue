@@ -13,7 +13,6 @@ const typedAnimation = () => {
   gsap.to(".typewriter", {
     text: "欢迎来到Windy的个人站！",
     duration: 2,
-    //slow then speeds up easing
     ease: "power1.in",
   });
 };
@@ -26,11 +25,7 @@ onMounted(() => {
   <div h-screen absolute top-0 left-0 right-0 bottom-0 class="landing-wrap">
     <div
       absolute
-      top-50%
-      left-50%
-      translate--50%
-      font-size-40px
-      class="typed-wrap"
+      class="typed-wrap top-50% left-50% translate--50% sm:font-size-6 xs:font-size-3 md:font-size-8 lg:font-size-10 xl:font-size-12"
     >
       <span class="typewriter"></span>
       <span m0 inline-block class="cursor">|</span>

@@ -2,9 +2,9 @@
   <div
     h-screen
     dark:bg-darkColor
-    light:bg-lightColor
+    bg-lightColor
     dark:color-lightColor
-    light:color-darkColor
+    color-darkColor
     class="layout-wrap theme-transition"
   >
     <NuxtLayout name="header"></NuxtLayout>

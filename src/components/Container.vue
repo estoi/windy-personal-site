@@ -32,7 +32,7 @@ const createScrollEffect = () => {
 
 const createEffectDiv = () => {
   let els = [];
-  for (let i = 0; i < 5000; i++) {
+  for (let i = 0; i < 5500; i++) {
     const n1 = simplex.noise2D(i * 0.003, i * 0.0033);
     const n2 = simplex.noise2D(i * 0.002, i * 0.001);
     const style = {
@@ -49,6 +49,7 @@ const createEffectDiv = () => {
       h("div", {
         style,
         class: "circle",
+        key: i,
       })
     );
   }
@@ -68,5 +69,6 @@ onMounted(() => {
     </div>
     <Landing />
     <TimeLine />
+    <About />
   </div>
 </template>
