@@ -20,6 +20,7 @@ const isMobile = () => {
 onMounted(() => {
   isMobile && $toast.warning("推荐使用PC端进行浏览", {
       position: "bottom-center",
+      timeout: 2450
     });
 });
 </script>
