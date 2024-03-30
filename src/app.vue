@@ -7,7 +7,6 @@ useHead({
   htmlAttrs: {
     lang: "zh-CN",
   },
-  title: "Windy", //网站标题
   link: [{ rel: "icon", href: ico }],
 });
 

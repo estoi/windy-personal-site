@@ -1,7 +1,11 @@
-import { fileURLToPath } from "url";
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  site: {
+    url: "https://windy-liu.cn/",
+    name: "Windy的个人站",
+    description: "欢迎来到Windy的个人站 Blog",
+    defaultLocale: "cn"
+  },
   devServer: {
     host: "0.0.0.0"
   },
@@ -15,6 +19,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/html-validator",
     "@unocss/nuxt",
+    "@nuxtjs/seo"
   ],
   build: {
     transpile: ["gsap"],

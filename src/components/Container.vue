@@ -71,4 +71,7 @@ onMounted(() => {
     <TimeLine />
     <About />
   </div>
+  <div class="text-center pb-20px color-black dark:color-white">
+      <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2024045173号-1</a>
+    </div>
 </template>
