@@ -71,7 +71,11 @@ onMounted(() => {
     <TimeLine />
     <About />
   </div>
-  <div class="text-center pb-20px color-black dark:color-white">
+  <div class="flex flex-items-center justify-center text-center pb-20px color-black dark:color-white">
       <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2024045173号-1</a>
+      <p class="flex flex-items-center ml-20px">
+        <img class="w20px h20px mr-5px" src="~/assets/images/beian.png" alt="">
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=42011502001694" rel="noreferrer" target="_blank">鄂公网安备42011502001694号</a>
+      </p>
     </div>
 </template>
